@@ -6,8 +6,8 @@ y=iris.target
 from sklearn.cross_validation import train_test_split 
 xTrain, xTest,yTrain,yTest = train_test_split(x,y,test_size = 0.5)
 
-from sklearn import tree
-myClassifier=tree.DecisionTreeClassifier()
+from sklearn.neighbors import KNeighborsClassifier
+myClassifier=KNeighborsClassifier()
 myClassifier.fit(xTrain,yTrain)
 predictions = myClassifier.predict(xTest)
 print predictions
